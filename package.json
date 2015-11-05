@@ -1,0 +1,39 @@
+{
+  "name": "npm-collect",
+  "version": "1.0.1",
+  "description": "automatically update package.json according to installed/linked modules in /node_modules ",
+  "main": "index.js",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  },
+  "bin":{
+    "npm-collect":"cli.js"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "/bin/bash -c 'coffee -c *.coffee'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://coderofsalvation@github.com/coderofsalvation/npm-collect.git"
+  },
+  "keywords": [
+    "package.json",
+    "npm",
+    "collect",
+    "update",
+    "node_modules",
+    "linking",
+    "npm",
+    "link",
+    "link"
+  ],
+  "author": "coderofsalvation",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/coderofsalvation/npm-collect/issues"
+  },
+  "homepage": "https://github.com/coderofsalvation/npm-collect#readme"
+}
