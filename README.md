@@ -9,7 +9,7 @@
 
 then:
   
-    $ npm-collect --save
+    $ npm-collect --help
     Usage: npm-collect <options>
     Options:
       --devDependencies    process dev-dependencies instead of dependencies
