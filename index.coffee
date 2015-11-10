@@ -7,9 +7,9 @@ module.exports = ( () ->
     opts.deptype = opts.deptype || "dependencies"
     opts.save  = opts.save  || false
     opts.verbose = opts.verbose || 1
-    throw "unknown type"+opts.deptype if opts.deptype not in ["dependencies","devDependencies"]
+    throw "unknown type"+opts.deptype if opts.deptype not in ["dependencies","devDependencies","optionalDependencies"]
 
-    return if not json[ opts.deptype ]
+    json[ opts.deptype ] = {} if not json[ opts.deptype ]?
     deps = json[ opts.deptype ]
     console.log JSON.stringify deps,null,2 if opts.verbose > 1
 
@@ -33,7 +33,7 @@ module.exports = ( () ->
                   deps[mod.name] = "^"+mod.version
                   save = true if opts.save
                 else 
-                  if not found and opts.new?
+                  if not found and not opts.new
                     console.log mod.name+"@(unsaved) -> "+mod.version if opts.verbose > 0
                     deps[mod.name] = "^"+mod.version
                     save = true if opts.save
